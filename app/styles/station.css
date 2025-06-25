@@ -1,0 +1,1099 @@
+.station-container {
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    padding: 0px 24px;
+    background-color: #f8f9fa;
+}
+
+.station-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    background-color: white;
+    border-left: 4px solid #4ADE80;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+}
+
+.back-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    border: none;
+    color: #4b5563;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: all 0.2s;
+}
+
+.back-button:hover {
+    background-color: #f3f4f6;
+}
+
+
+.station-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.station-search-box {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 20px;
+    padding: 6px 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.station-search-box:hover {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.station-search-box:focus {
+    color: #4ADE80;
+}
+
+.station-search-box input {
+    border: none;
+    outline: none;
+    margin-left: 8px;
+    font-size: 14px;
+    width: 160px;
+}
+
+.station-icon-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.station-icon-button:hover {
+    background-color: #f1f5f9;
+}
+
+.section-node {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.compare-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background-color: #4aa8de;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.compare-button:hover {
+    background-color: #4092c2;
+}
+
+
+.add-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background-color: #4ADE80;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.add-button:hover {
+    background-color: #22c55e;
+}
+
+.nodes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 24px;
+    padding: 20px 0;
+}
+
+.node-card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    border-top: 3px solid #4ADE80;
+}
+
+.node-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.node-card.sleep {
+    border-top-color: #F59E0B;
+}
+
+.node-card.offline {
+    border-top-color: #9CA3AF;
+}
+
+.node-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.node-card-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #111827;
+}
+
+.node-card-area {
+    font-size: 14px;
+    color: #6b7280;
+    margin-top: 4px;
+}
+
+.node-card-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.edit-btn {
+    width: 32px;
+    height: 32px;
+    background-color: #F3F4F6;
+    border: none;
+    border-radius: 8px;
+    color: #4B5563;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.edit-btn:hover {
+    background-color: #4ADE80;
+    color: white;
+}
+
+.delete-btn {
+    padding: 8px 16px;
+    border-radius: 8px;
+    background-color: #fee2e2;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    color: #ef4444;
+    font-size: 14px;
+}
+
+.delete-btn:hover {
+    background-color: #ef4444;
+    color: white;
+}
+
+.node-card.offline {
+    border-top-color: #9CA3AF;
+}
+
+.edit-btn:hover {
+    background-color: #4ADE80;
+    color: white;
+}
+
+.delete-btn {
+    padding: 8px 16px;
+    border-radius: 8px;
+    background-color: #fee2e2;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    color: #ef4444;
+    font-size: 14px;
+}
+
+.delete-btn:hover {
+    background-color: #ef4444;
+    color: white;
+}
+
+.detail-value.success {
+    color: #4ADE80;
+}
+
+.detail-value.offline {
+    color: #9CA3AF;
+}
+
+.node-metrics {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding: 16px 0;
+    border-top: 1px solid #f3f4f6;
+    border-bottom: 1px solid #f3f4f6;
+    margin-bottom: 12px;
+}
+
+.metric {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    background-color: #f9fafb;
+    padding: 10px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.metric:hover {
+    background-color: #f3f4f6;
+    transform: translateY(-2px);
+}
+
+.metric-label {
+    font-size: 11px;
+    color: #6b7280;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.metric-value {
+    font-size: 16px;
+    font-weight: 600;
+    color: #111827;
+}
+
+.metric-temperature .metric-value {
+    color: #ef4444;
+}
+
+.metric-humidity .metric-value {
+    color: #3b82f6;
+}
+
+.metric-ph .metric-value {
+    color: #8b5cf6;
+}
+
+.metric-ec .metric-value {
+    color: #10b981;
+}
+
+.metric-nitrogen .metric-value {
+    color: #6366f1;
+}
+
+.metric-phosphorus .metric-value {
+    color: #f59e0b;
+}
+
+.metric-potassium .metric-value {
+    color: #ec4899;
+}
+
+.detail-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+}
+
+.detail-label {
+    font-size: 16px;
+    color: #6b7280;
+}
+
+.detail-value.success {
+    color: #10B981;
+    font-weight: 600;
+}
+
+
+.detail-value.offline {
+    color: #EF4444;
+    font-weight: 600;
+}
+
+
+.node-footer {
+    display: flex;
+    font-size: 14px;
+    margin-top: 12px;
+    gap: 6px;
+    color: #6b7280;
+}
+
+.update-time {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.edit-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.edit-modal {
+    background-color: white;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+    animation: slideUp 0.3s ease-out;
+}
+
+.edit-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #E5E7EB;
+}
+
+.edit-modal-header h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #111827;
+    margin: 0;
+}
+
+.close-btn {
+    width: 32px;
+    height: 32px;
+    background-color: #F3F4F6;
+    border: none;
+    border-radius: 8px;
+    color: #4B5563;
+    cursor: pointer;
+}
+
+.edit-modal-content {
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 8px;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #4ADE80;
+    box-shadow: 0 0 0 2px rgba(74, 222, 128, 0.1);
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #D1D5DB;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: all 0.2s;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24px;
+}
+
+.Node-edit-modal-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24px;
+}
+
+.Node-edit-modal-actions>div {
+    display: flex;
+    gap: 12px;
+}
+
+.delete-btn {
+    padding: 8px 16px;
+    border: 1px solid #EF4444;
+    border-radius: 6px;
+    background-color: white;
+    color: #EF4444;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.delete-btn:hover {
+    background-color: #EF4444;
+    color: white;
+}
+
+.cancel-btn {
+    padding: 8px 16px;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    background-color: white;
+    color: #4b5563;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.cancel-btn:hover {
+    background-color: #f9fafb;
+}
+
+.save-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    background-color: #4ADE80;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.save-btn:hover {
+    background-color: #22C55E;
+}
+
+/* Graph Comparison Modal Styles */
+.st-graph-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px;
+    backdrop-filter: blur(4px);
+}
+
+.st-graph-modal {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    width: 90%;
+    max-width: 1400px;
+    max-height: 90vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.st-graph-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 32px;
+    border-bottom: 1px solid #e5e7eb;
+    background: linear-gradient(135deg, #4ade80 0%, #22c55e 100%);
+    color: white;
+}
+
+.st-graph-modal-header h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.st-graph-modal-header .close-btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    color: white;
+    transition: all 0.2s ease;
+}
+
+.st-graph-modal-header .close-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+}
+
+.st-graph-modal-content {
+    padding: 32px;
+    overflow-y: auto;
+    flex: 1;
+    background: #f8fafc;
+}
+
+.st-graph-controls {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 32px;
+    margin-bottom: 32px;
+    background: white;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.st-control-section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.st-control-section h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #374151;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #e5e7eb;
+}
+
+.st-node-selection-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.st-node-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: white;
+}
+
+.st-node-checkbox:hover {
+    border-color: #3b82f6;
+    background: #f8fafc;
+    transform: translateY(-1px);
+}
+
+.st-node-checkbox input[type="checkbox"] {
+    display: none;
+}
+
+.st-node-checkbox .st-checkmark {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #d1d5db;
+    border-radius: 4px;
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+.st-node-checkbox .st-checkmark::after {
+    content: '';
+    position: absolute;
+    display: none;
+    left: 6px;
+    top: 2px;
+    width: 6px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.node-checkbox input[type="checkbox"]:checked+.checkmark::after {
+    display: block;
+}
+
+.st-node-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.st-node-name {
+    font-weight: 600;
+    color: #374151;
+    font-size: 14px;
+}
+
+.st-node-area {
+    font-size: 12px;
+    color: #6b7280;
+}
+
+.st-sensor-selection-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.st-sensor-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: white;
+    font-size: 14px;
+}
+
+.st-sensor-checkbox:hover {
+    border-color: #10b981;
+    background: #f0fdf4;
+}
+
+.st-sensor-checkbox input[type="checkbox"] {
+    display: none;
+}
+
+.st-sensor-checkbox .st-checkmark {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #d1d5db;
+    border-radius: 4px;
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+.st-sensor-checkbox .st-checkmark::after {
+    content: '';
+    position: absolute;
+    display: none;
+    left: 5px;
+    top: 1px;
+    width: 5px;
+    height: 9px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.st-sensor-checkbox input[type="checkbox"]:checked+.st-checkmark {
+    background-color: #10b981;
+    border-color: #10b981;
+}
+
+/* .st-sensor-checkbox input[type="checkbox"]:checked + .st-checkmark::after {
+    display: block;
+} */
+
+.st-date-range {
+    display: flex;
+    gap: 16px;
+}
+
+.st-date-input-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.st-date-input-group label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #374151;
+}
+
+.st-date-input-group input[type="date"] {
+    padding: 10px 12px;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.2s ease;
+    background: white;
+}
+
+.st-date-input-group input[type="date"]:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.st-time-interval {
+    display: flex;
+    gap: 16px;
+    margin-top: 8px;
+}
+
+.st-interval-radio {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.st-interval-radio input[type="radio"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.st-interval-radio span {
+    font-size: 14px;
+    color: #333;
+}
+
+.st-interval-radio:active {
+    color: #10B981;
+}
+
+.st-graph-container {
+    background: white;
+    border-radius: 12px;
+    padding: 16px 0px;
+    padding-left: 30px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.st-graph-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    color: #9ca3af;
+    gap: 16px;
+}
+
+.st-graph-placeholder p {
+    font-size: 16px;
+    margin: 0;
+}
+
+.recharts-legend-icon {
+    display: none !important;
+}
+
+.expand-graph-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 8px;
+    padding: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.expand-graph-btn:hover {
+    background: #f3f4f6;
+    transform: scale(1.05);
+}
+
+.expanded-graph-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1100;
+    padding: 20px;
+}
+
+.expanded-graph-modal {
+    background: white;
+    border-radius: 16px;
+    width: 95%;
+    height: 90vh;
+    padding: 24px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.expanded-graph-modal .close-btn {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: #f3f4f6;
+    border: none;
+    border-radius: 8px;
+    padding: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.expanded-graph-modal .close-btn:hover {
+    background: #e5e7eb;
+}
+
+.expanded-graph-container {
+    flex: 1;
+    width: 100%;
+    height: calc(100% - 48px);
+    margin-top: 24px;
+}
+
+/* Responsive Design
+@media (max-width: 1024px) {
+    .graph-controls {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    
+    .graph-modal {
+        width: 98vw;
+        max-height: 95vh;
+    }
+    
+    .graph-modal-content {
+        padding: 20px;
+    }
+} */
+
+/* Animation for modal */
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9) translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.graph-modal {
+    animation: modalSlideIn 0.3s ease-out;
+}
+
+/* Hover effects for better UX */
+.node-checkbox:checked {
+    border-color: var(--node-color, #3b82f6);
+    background: rgba(59, 130, 246, 0.05);
+}
+
+.sensor-checkbox:checked {
+    border-color: #10b981;
+    background: #f0fdf4;
+}
+
+/* Custom scrollbar for modal content */
+.graph-modal-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.graph-modal-content::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 3px;
+}
+
+.graph-modal-content::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 3px;
+}
+
+.graph-modal-content::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* Toast Notification */
+.st-toast {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 12px 16px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    z-index: 1001;
+    font-size: 14px;
+    font-weight: 500;
+    animation: slideIn 0.3s ease-out forwards;
+}
+
+.st-toast-success {
+    background: linear-gradient(135deg, #4ADE80, #22c55e);
+    color: white;
+}
+
+.st-toast-error {
+    background: linear-gradient(135deg, #f87171, #ef4444);
+    color: white;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .station-container {
+        padding: 0px 16px;
+    }
+
+    .station-header {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .back-button {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+
+    .station-search-box {
+        width: 150px;
+        font-size: 12px;
+    }
+
+    .section-node h2 {
+        font-size: 24px;
+    }
+
+    .compare-button {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .add-button {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .nodes-grid {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .node-card {
+        width: 46.6%;
+        height: 400px;
+        padding: 15px;
+    }
+
+    .node-metrics {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+        margin-bottom: 0px;
+    }
+
+    .metric {
+        padding: 2px;
+        font-size: 12px;
+        gap: 0px;
+        align-items: center;
+    }
+
+    .metric-label {
+        font-size: 8px;
+    }
+
+    .metric-value {
+        font-size: 12px;
+    }
+
+    .node-details {
+        padding: 0px;
+    }
+
+    .node-footer {
+        margin-top: 0px;
+    }
+
+    .update-time {
+        font-size: 12px;
+    }
+
+    .date-range {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .graph-modal-header {
+        padding: 16px 20px;
+    }
+
+    .graph-modal-header h2 {
+        font-size: 20px;
+    }
+
+    .graph-container {
+        padding: 16px;
+    }
+}

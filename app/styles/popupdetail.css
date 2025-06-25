@@ -1,0 +1,282 @@
+.vd-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+    opacity: 0;
+    animation: fadeIn 0.3s ease forwards;
+}
+
+.vd-popup-content {
+    background-color: white;
+    border-radius: 16px;
+    padding: 24px;
+    width: 90%;
+    max-width: 800px;
+    max-height: 90vh;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    opacity: 0;
+    animation: slideUp 0.5s ease forwards;
+}
+
+.vd-close-button {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+    padding: 0px 12px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.vd-close-button:hover {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.vd-popup-header {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #eee;
+}
+
+.popup-image {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.popup-title h2 {
+    margin: 0;
+    color: #333;
+    font-size: 24px;
+}
+
+.scientific-name {
+    color: #666;
+    font-style: italic;
+    margin: 4px 0;
+}
+
+.vd-popup-details {
+    display: grid;
+    gap: 24px;
+}
+
+.vd-detail-group {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.vd-detail-group h3 {
+    margin: 0 0 16px 0;
+    color: #2c3e50;
+    font-size: 18px;
+}
+
+.vd-detail-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px dashed #ddd;
+}
+
+.vd-detail-item:last-child {
+    border-bottom: none;
+}
+
+.fertilizer-timeline {
+    display: grid;
+    gap: 16px;
+}
+
+.timeline-item {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 16px;
+    padding: 12px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.timeline-label {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.timeline-content {
+    color: #666;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+@media (max-width: 768px) {
+    .vd-popup-content {
+        width: 95%;
+        padding: 16px;
+        max-height: 95vh;
+    }
+
+    .vd-popup-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 16px;
+        margin-bottom: 16px;
+        padding-bottom: 12px;
+    }
+
+    .popup-image {
+        width: 100px;
+        height: 100px;
+    }
+
+    .popup-title h2 {
+        font-size: 20px;
+    }
+
+    .scientific-name {
+        font-size: 14px;
+    }
+
+    .vd-detail-group {
+        padding: 16px;
+    }
+
+    .vd-detail-group h3 {
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+
+    .vd-detail-item {
+        flex-direction: column;
+        gap: 4px;
+        padding: 6px 0;
+    }
+
+    .timeline-item {
+        grid-template-columns: 1fr;
+        gap: 4px;
+        padding: 10px;
+    }
+
+    .timeline-label {
+        color: #4ADE80;
+        font-size: 14px;
+    }
+
+    .timeline-content {
+        font-size: 14px;
+    }
+
+    .vd-close-button {
+        top: 12px;
+        right: 12px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .vd-popup-content {
+        width: 95%;
+        padding: 16px;
+        max-height: 95vh;
+        overflow: auto;
+    }
+
+    .vd-popup-header {
+        flex-direction: row;
+        text-align: left;
+        gap: 16px;
+        margin-bottom: 16px;
+        padding-bottom: 12px;
+    }
+
+    .popup-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .popup-title h2 {
+        font-size: 20px;
+    }
+
+    .scientific-name {
+        font-size: 14px;
+    }
+
+    .vd-detail-group {
+        padding: 16px;
+    }
+
+    .vd-detail-group h3 {
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+
+    .vd-detail-item {
+        flex-direction: row;
+        gap: 4px;
+        padding: 6px 0;
+    }
+
+    .timeline-item {
+        grid-template-columns: 1fr;
+        gap: 4px;
+        padding: 10px;
+    }
+
+    .timeline-label {
+        color: #4ADE80;
+        font-size: 14px;
+    }
+
+    .timeline-content {
+        font-size: 14px;
+    }
+
+    .vd-close-button {
+        top: 12px;
+        right: 12px;
+        font-size: 20px;
+    }
+}
+
+}

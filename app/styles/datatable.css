@@ -1,0 +1,243 @@
+.dt-container {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    padding: 0 24px;
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+}
+
+.dt-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    background-color: white;
+    border-left: 4px solid #4ADE80;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+}
+
+.dt-title h1 {
+    font-size: 24px;
+    font-weight: 500;
+    color: #4b5563;
+}
+
+.dt-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.dt-search-box {
+    display: flex;
+    align-items: center;
+    background-color: #f8fafc;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 8px 16px;
+    width: 320px;
+    transition: all 0.3s ease;
+}
+
+.dt-search-box:hover,
+.dt-search-box:focus-within {
+    border-color: #4ADE80;
+    box-shadow: 0 4px 12px rgba(74, 222, 128, 0.15);
+    transform: translateY(-1px);
+}
+
+.dt-search-box input {
+    border: none;
+    outline: none;
+    width: 100%;
+    margin-left: 12px;
+    font-size: 14px;
+    background: transparent;
+    color: #1e293b;
+}
+
+.dt-search-box input::placeholder {
+    color: #94a3b8;
+}
+
+.dt-table-container {
+    flex: 1;
+    overflow-x: auto;
+    overflow-y: auto;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 41px;
+    max-height: calc(100vh - 180px);
+}
+
+.dt-table {
+    width: 100%;
+    border-collapse: collapse;
+    white-space: nowrap;
+}
+
+.dt-table tr {
+    min-height: 5px;
+    max-height: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.dt-table th,
+.dt-table td {
+    padding: 8px 16px;
+    text-align: center;
+    border-bottom: 1px solid #e2e8f0;
+    height: 59.1px;
+    line-height: 1.5;
+}
+
+.dt-table th {
+    background-color: #f8fafc;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.dt-table td {
+    color: #4b5563;
+}
+
+.dt-table tr:hover {
+    background-color: #f1f5f9;
+}
+
+.sensor.temp {
+    color: #ef4444;
+}
+
+.sensor.humid {
+    color: #3b82f6;
+}
+
+.sensor.cond {
+    color: #8b5cf6;
+}
+
+.sensor.ph {
+    color: #10b981;
+}
+
+.sensor.n {
+    color: #f59e0b;
+}
+
+.sensor.p {
+    color: #6366f1;
+}
+
+.sensor.k {
+    color: #ec4899;
+}
+
+.dt-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    padding: 27.5px;
+    background-color: white;
+    border-radius: 12px 12px 0 0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.dt-page-button {
+    padding: 8px 16px;
+    border: none;
+    background-color: #4ADE80;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.dt-page-button:hover:not(:disabled) {
+    background-color: #22c55e;
+    transform: translateY(-1px);
+}
+
+.dt-page-button:disabled {
+    background-color: #e2e8f0;
+    cursor: not-allowed;
+}
+
+.dt-page-info {
+    color: #4b5563;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .dt-container {
+        padding: 0 12px;
+    }
+    
+    .dt-header {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 12px 16px;
+        gap: 12px;
+    }
+    
+    .dt-title {
+        text-align: center;
+    }
+    
+    .dt-title h1 {
+        font-size: 18px;
+    }
+    
+    .dt-header-actions {
+        justify-content: center;
+    }
+    
+    .dt-search-box {
+        width: 100%;
+        max-width: none;
+        min-width: auto;
+    }
+    
+    .dt-table-container {
+        margin-bottom: 12px;
+        max-height: calc(100vh - 220px);
+        overflow-x: auto;
+    }
+    
+    .dt-table {
+        min-width: 500px;
+    }
+    
+    .dt-table th,
+    .dt-table td {
+        padding: 8px 10px;
+        font-size: 13px;
+        min-width: 60px;
+        height: 42.2px;
+        min-height: 40px;
+    }
+    
+    .dt-pagination {
+        flex-direction: row;
+        gap: 8px;
+        padding: 12px;
+    }
+    
+    .dt-page-info {
+        margin-bottom: 0px;
+    }
+    
+    .dt-page-button {
+        padding: 8px 12px;
+        min-width: 40px;
+        min-height: 40px;
+    }
+}
